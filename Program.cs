@@ -9,7 +9,8 @@ class TestSpace
     {
         //var input = Convert.ToInt32(Console.ReadLine());
         //var input = Console.ReadLine();
-        var input = new[] { -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20 };
+        var input = new[] { -6, -5, -4, -3, -2, 0, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20, 21, 23};
+        var input1 = new int[] { 2 };
 
         Stopwatch sw = new Stopwatch();
         sw.Start();
