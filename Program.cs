@@ -9,21 +9,12 @@ class TestSpace
     {
         //var input = Convert.ToInt32(Console.ReadLine());
         //var input = Console.ReadLine();
-
-        var input = new int[][]
-        {
-            new int[] {0}
-        };
-
-        int[][] board;
-        int boardLength;
-        int squareLength;
+        var input = new[] { -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20 };
 
         Stopwatch sw = new Stopwatch();
         sw.Start();
 
-        Sudoku(input);
-        var result = IsValid();
+        var result = Kata16.RangeExtraction.Extract(input);
 
         Console.WriteLine("Result: {0}", result);
         //foreach (var item in result) Console.WriteLine(item);
@@ -31,44 +22,5 @@ class TestSpace
         sw.Stop();
         Console.WriteLine("Time taken: {0}", sw.Elapsed);
         Console.ReadKey();
-        
-        void Sudoku(int[][] sudokuData)
-        {
-            board = sudokuData;
-            boardLength = sudokuData.Length;
-            squareLength = Convert.ToInt32(Math.Sqrt(sudokuData.Length));
-        }
-
-        bool IsValid()
-        {
-            for (int i = 0; i < boardLength; i++)
-            {
-                var checkedRow = new bool[boardLength + 1];
-                var checkedColumn = new bool[boardLength + 1];
-                var checkedSquare = new bool[boardLength + 1];
-
-                for (int j = 0; j < boardLength; j++)
-                {
-                    int boardValue = board[i][j];
-                    if (boardValue == 0 || boardValue > boardLength) return false;
-
-                    if (checkedRow[boardValue]) return false;
-                    checkedRow[boardValue] = true;
-
-                    boardValue = board[j][i];
-                    if (checkedColumn[boardValue]) return false;
-                    checkedColumn[boardValue] = true;
-
-                    int squareCoordinateX = squareLength * (i / squareLength);
-                    int squareCoordinateY = squareLength * (i % squareLength);
-
-                    boardValue = board[(j % squareLength) + squareCoordinateX][(j / squareLength) + squareCoordinateY];
-                    if (checkedSquare[boardValue]) return false;
-                    checkedSquare[boardValue] = true;
-                }
-            }
-
-            return true;
-        }
     }    
 }
