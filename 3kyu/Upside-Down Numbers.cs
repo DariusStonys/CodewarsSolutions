@@ -11,51 +11,45 @@ namespace _3kyu
 		// Output: Your function must return the number of valid upside down numbers within the range of the two input arguments, including both upper and lower bounds.
 		public static int UpsideDown(string x, string y)
 		{
-			int xlength = x.Length;
-			int ylength = y.Length;
+			int xLength = x.Length;
+			int yLength = y.Length;
 
-			int difference = NumbersInDecimalInterval(ylength) - NumbersInDecimalInterval(xlength);
+			int difference = NumbersInDecimalInterval(yLength) - NumbersInDecimalInterval(xLength);
 
 			int numberCount = 0;
+			bool digitWasSame = false;
 
-			for (int i = 0; 2 * i <= x.Length; i++)
+			for (int i = 0; 2 * i <= xLength; i++)
 			{
+				int add;
+				if (i == 0) add = 4;
+				else if (2 * i == xLength - 1) add = 3;
+				else add = 5;
+
 				StringBuilder mutableX = new StringBuilder(x);
-				mutableX[i] = '1';
-				mutableX[x.Length - 1 - i] = '1';
-				Console.WriteLine(mutableX);
+				StringBuilder mutableY = new StringBuilder(y);
+
+				if (digitWasSame && mutableX[i] == mutableY[i]) digitWasSame = true;
+				else digitWasSame = false;
+
+				if (ToInt(mutableX[i]) < 1 && 1 < ToInt(mutableY[i])) add++;
+				if (ToInt(mutableX[i]) < 6 && 6 < ToInt(mutableY[i])) add++;
+				if (ToInt(mutableX[i]) < 8 && 8 < ToInt(mutableY[i])) add++;
+
+				numberCount *= add;
+				//mutableX[x.Length - 1 - i] = '1';
+				//Console.WriteLine(mutableX);
 
 				//if (CompareStrings(mutableX.ToString(), x)) Console.WriteLine(mutableX);
 
-				//for (int j = 0; 2 * i <= x.Length; j++) 
-				//{
-				//	if (j != i)
-				//	{
-
-				//	}
-
-				//	for (int k = 0; 2 * i <= x.Length; k++)
-				//	{
-				//		if (k != j && k != i)
-				//		{
-
-				//		}
-
-				//		for (int l = 0; 2 * i <= x.Length; l++)
-				//		{
-				//			if (l != k && l != j && l != i)
-				//			{
-
-				//			}
-				//		}
-				//	}
-				//}
 			}
 
-			return numberCount;
+			return numberCount + difference;
 		}
 
 		private static bool CompareStrings(string a, string b) => BigInteger.Parse(b) > BigInteger.Parse(a);
+
+		public static int ToInt(char a) => int.Parse(a.ToString());
 
 		// This method is a mathematical equation for upside down numbers withing the range [0, 10^(n.length)], derived using combinatorics; and is used for the sake of optimization.
 		private static int NumbersInDecimalInterval(int n)
