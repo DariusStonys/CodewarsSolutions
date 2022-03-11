@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace _6kyu
+namespace Kyu6
 {
-	public class Kata6
+	public class Kata4
 	{
 		// https://www.codewars.com/kata/54da5a58ea159efa38000836
 		// Given an array, find the integer that appears an odd number of times.
@@ -19,10 +19,8 @@ namespace _6kyu
 				{
 					if (seq[i] > seq[i + 1])
 					{
-						int temp = seq[i + 1];
-						seq[i + 1] = seq[i];
-						seq[i] = temp;
-						didSwap = true;
+                        (seq[i], seq[i + 1]) = (seq[i + 1], seq[i]);
+                        didSwap = true;
 					}
 				}
 			} while (didSwap);
@@ -36,7 +34,7 @@ namespace _6kyu
 				j += 2;
 			}
 
-			return seq[seq.Length - 1];
+			return seq[^1];
 		}
 
 		// or, if we could use System.Collections.Generic:

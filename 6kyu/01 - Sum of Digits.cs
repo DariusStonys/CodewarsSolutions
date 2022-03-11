@@ -1,4 +1,4 @@
-namespace _6kyu
+namespace Kyu6
 {
 	public class Kata1
 	{
@@ -12,7 +12,7 @@ namespace _6kyu
 			do
 			{
 				sum += n % 10;
-				n = n / 10;
+				n /= 10;
 			}
 			while (n > 0);
 

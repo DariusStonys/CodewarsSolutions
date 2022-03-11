@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace _4kyu
+namespace Kyu4
 {
-    public class Kata15
+    public class Kata5
     {
         // https://www.codewars.com/kata/540afbe2dc9f615d5e000425
         // Given a Sudoku data structure with size NxN, N > 0 and √N == integer, write a method to validate if it has been filled out correctly.

@@ -1,6 +1,6 @@
 using System;
 
-namespace _6kyu
+namespace Kyu6
 {
 	public class Kata2
 	{
@@ -9,9 +9,8 @@ namespace _6kyu
 		// Given a closed interval[n, m], return the even number that is the strongest in the interval. If multiple solutions exist return the smallest strongest even number.
 		public static int StrongestEven(int n, int m)
 		{
-			int strongestEvenNumber = 2;
-
-			do
+            int strongestEvenNumber;
+            do
 			{
 				strongestEvenNumber = n;
 				n += (int)Math.Pow(2, ExtractPowersOf2(n));

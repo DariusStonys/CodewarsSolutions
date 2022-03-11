@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 
-namespace _7kyu
+namespace Kyu7
 {
-	public class Kata
+	public class Kata3
 	{
 		public static string OddOrEven(int[] array) => array.Sum() % 2 == 0 ? "even" : "odd";
 	}

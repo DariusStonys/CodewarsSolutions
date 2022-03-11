@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _4kyu
+namespace Kyu4
 {
-    public class Kata16
+    public class Kata6
     {
         // https://www.codewars.com/kata/51ba717bb08c1cd60f00002f
         // Complete the solution so that it takes a list of integers in increasing order and returns a correctly formatted string in the range format.

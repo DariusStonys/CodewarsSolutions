@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Numerics;
 
-namespace _3kyu
+namespace Kyu3
 {
-	public class KataNotDone1
+	public class Kata1
 	{
 		// https://www.codewars.com/kata/53d40c1e2f13e331fc000c26
 		// In this kata you will have to calculate fib(n). Write an algorithm that can handle n up to 2000000.

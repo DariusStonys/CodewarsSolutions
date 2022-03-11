@@ -1,19 +1,18 @@
-namespace _6kyu
+namespace Kyu6
 {
-	public class Kata8
+	public class Kata5
 	{
 		// https://www.codewars.com/kata/5842df8ccbd22792a4000245/
 		// You will be given a number and you will need to return it as a string in Expanded Form.
 		public static string ExpandedForm(long num)
 		{
 			var resultString = "";
-			var zeroes = "";
-			char[] numberList = num.ToString().ToCharArray();
+            char[] numberList = num.ToString().ToCharArray();
 
 			for (int i = 0; i < numberList.Length; i++)
 			{
-				zeroes = "";
-				if (i == 0 || numberList[i].ToString() != "0")
+                string zeroes = "";
+                if (i == 0 || numberList[i].ToString() != "0")
 				{
 					for (int j = 1; j < numberList.Length - i; j++)
 						zeroes += "0";

@@ -2,9 +2,9 @@
 using System.Text;
 using System.Numerics;
 
-namespace _3kyu
+namespace Kyu3
 {
-	public class KataNotDone2
+	public class Kata2
 	{
 		// https://www.codewars.com/kata/59f98052120be4abfa000304
 		// Input: Your function will receive two strings, each comprised of digits representing a positive integer.These two values will represent the upper and lower bounds of a range.

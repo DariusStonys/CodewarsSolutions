@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _4kyu
+namespace Kyu4
 {
-	public class Kata12
+	public class Kata2
 	{
 		// https://www.codewars.com/kata/5254ca2719453dcc0b00027d
 		// In this kata you have to create all permutations of an input string and remove duplicates, if present. This means, you have to shuffle all letters from the input in all possible orders.
@@ -20,7 +20,7 @@ namespace _4kyu
 			return builtStrings;
 		}
 
-		static void Permute(char[] builder, int start, int end, List<string> builtStrings)
+		private static void Permute(char[] builder, int start, int end, List<string> builtStrings)
 		{
 			if (start == end)
 			{
@@ -46,11 +46,9 @@ namespace _4kyu
 		{
 			if (a != b)
 			{
-				char temp = a;
-				a = b;
-				b = temp;
-			}
-		}
+                (b, a) = (a, b);
+            }
+        }
 		
 		private static void RemoveDuplicates(List<string> list)
 		{

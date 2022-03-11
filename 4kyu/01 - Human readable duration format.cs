@@ -1,6 +1,6 @@
-﻿namespace _4kyu
+﻿namespace Kyu4
 {
-	public class Kata11
+	public class Kata1
 	{
 		// https://www.codewars.com/kata/52742f58faf5485cae000b9a
 		// Your task in order to complete this Kata is to write a function which formats a duration, given as a number of seconds, in a human-friendly way.

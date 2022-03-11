@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _4kyu
+namespace Kyu4
 {
-	public class Kata13
+	public class Kata3
 	{
 		// https://www.codewars.com/kata/5b5fe164b88263ad3d00250b
 		// Alphametics is a type of cryptarithm in which a set of words is written down in the form of a long addition sum or some other mathematical problem. The objective is to replace the letters of the alphabet with decimal digits to make a valid arithmetic sum.
