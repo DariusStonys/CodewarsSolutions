@@ -7,12 +7,13 @@ class ConsoleSpace
     static void Main()
     {
         //var input = Convert.ToInt32(Console.ReadLine());
-        //var input = new ("12", "456");
+        var input = 100;
 
         Stopwatch sw = new Stopwatch();
         sw.Start();
 
-        var result = Kyu4.Kata11.SumStrings("999", "1");
+        //var result = Kyu3.Kata2.UpsideDown("1", "999999999999999999999999999999999999999999");
+        var result = Kyu3.Kata2.UpsideDown("1", "99999999999999999999");
 
         if (result.GetType().IsGenericType || result.GetType().IsArray)
         {
