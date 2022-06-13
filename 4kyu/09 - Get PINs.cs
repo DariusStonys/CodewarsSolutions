@@ -15,7 +15,6 @@ namespace Kyu4
             {
                 PINs = GenerateVariations(PINs, int.Parse(observed[i].ToString()));
             }
-
             return PINs;
         }
 
@@ -33,17 +32,18 @@ namespace Kyu4
             return variedPINs;
         }
 
-        private static readonly List<List<string>> digitVariations = new List<List<string>> {
-                new List<string> { "0", "8" },
-                new List<string> { "1", "2", "4" },
-                new List<string> { "1", "2", "3", "5" },
-                new List<string> { "2", "3", "6" },
-                new List<string> { "1", "4", "5", "7" },
-                new List<string> { "2", "4", "5", "6", "8" },
-                new List<string> { "3", "5", "6", "9" },
-                new List<string> { "4", "7", "8" },
-                new List<string> { "0", "5", "7", "8", "9"},
-                new List<string> { "6", "8", "9" }
+        private static readonly List<List<string>> digitVariations = new List<List<string>>
+        {
+            new List<string> { "0", "8" },
+            new List<string> { "1", "2", "4" },
+            new List<string> { "1", "2", "3", "5" },
+            new List<string> { "2", "3", "6" },
+            new List<string> { "1", "4", "5", "7" },
+            new List<string> { "2", "4", "5", "6", "8" },
+            new List<string> { "3", "5", "6", "9" },
+            new List<string> { "4", "7", "8" },
+            new List<string> { "0", "5", "7", "8", "9"},
+            new List<string> { "6", "8", "9" }
         };
     }
 }
